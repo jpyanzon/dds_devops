@@ -69,7 +69,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/dds-devops:latest
 
 
-      - name: Publicar imagen en GHCR
+      - name: Publicar imagen en GHCR y Docker Hub
         run: |
           docker push \
             ${{ steps.image.outputs.name }}:${GITHUB_SHA::7}
